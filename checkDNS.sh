@@ -5,8 +5,6 @@
 host=$1
 
 #Get all of the DNS servers in AD into $array[]
-#mapfile -t array < <(nslookup -type=NS hcbocc.ad | grep Name | cut -f 2 -d$'\t')
-
 mapfile -t array < <(nslookup -type=NS hcbocc.ad | grep hcbocc.ad | cut -f 2 -d "=" | cut -f 2 -d " " | sort)
 
 #Add the Umbrella servers
