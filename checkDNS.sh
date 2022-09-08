@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#To use this script, run ./checkA.sh {hostname}
+#To use this script, run ./checkA.sh {hostname} {query type a|ptr|soa}
 
 host=$1
 
